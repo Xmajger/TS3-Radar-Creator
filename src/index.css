@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    font-family: 'Roboto', 'Google Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  input, button, select, textarea {
+    font-family: inherit;
+  }
+}
+
+/* Leaflet */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  background: #1A1B1C;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Bring Leaflet zoom control below the top bar */
+.leaflet-top.leaflet-right { top: 56px; }
+.leaflet-top.leaflet-left  { top: 56px; }
+
+/* Scrollbars */
+::-webkit-scrollbar             { width: 5px; height: 5px; }
+::-webkit-scrollbar-track       { background: #1A1B1C; }
+::-webkit-scrollbar-thumb       { background: #37393B; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #4A4C4E; }
+*                               { scrollbar-width: thin; scrollbar-color: #37393B #1A1B1C; }
+
+/* Remove number input spinners globally (we use them only with explicit styling) */
+input[type=number].no-spin::-webkit-inner-spin-button,
+input[type=number].no-spin::-webkit-outer-spin-button { appearance: none; }
